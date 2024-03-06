@@ -235,4 +235,12 @@ public class BrowserUtils {
         driver.switchTo().parentFrame();
     }
 
+    public static void sendKeys(WebElement element, String keys, WebDriver driver){
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        element = wait.until(ExpectedConditions.elementToBeClickable(element));
+        element.clear();
+        element.sendKeys(keys);
+
+    }
+
 }

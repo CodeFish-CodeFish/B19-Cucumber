@@ -1,7 +1,6 @@
 package com.sauce_labs.step_definitions;
 
 import com.sauce_labs.pages.HomeMainPage;
-import com.sauce_labs.pages.LoginPage;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
