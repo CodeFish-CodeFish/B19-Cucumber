@@ -10,10 +10,10 @@ import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import utils.DriverHelper;
 
-public class StepDefinitions {
+public class StepDefinitions{
 
 
-    WebDriver driver = DriverHelper.getDriver();
+    WebDriver driver = SmartHook.driver; // this driver is provided by hook class where it declared as static
 
     LoginPage loginPage = new LoginPage(driver);
 

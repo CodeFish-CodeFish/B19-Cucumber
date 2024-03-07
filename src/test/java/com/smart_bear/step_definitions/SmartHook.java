@@ -9,7 +9,8 @@ import utils.DriverHelper;
 public class SmartHook {
 
     // NOTE: annotations are not from JUnit
-    WebDriver driver;
+    public static WebDriver driver ; // made our driver static so that in stepDef class we
+    // could use the same driver.
     @Before // this annotation is from io.cucumber.java
     public void initializeDriver(){
         driver = DriverHelper.getDriver();

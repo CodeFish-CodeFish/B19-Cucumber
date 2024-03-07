@@ -14,8 +14,15 @@ public class MainPage {
     @FindBy(css = "a[href='/contact_us']")
     WebElement contactUsLink;
 
+    @FindBy(css = "i[class='fa fa-lock']")
+    WebElement signUpBtn;
+
     public void clickOnContactUs(){
         contactUsLink.click();
+    }
+
+    public void clickOnSignUp(){
+        signUpBtn.click();
     }
 
 
