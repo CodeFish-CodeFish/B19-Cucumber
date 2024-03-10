@@ -20,6 +20,12 @@ public class BrowserUtils {
         return element.getText().trim();
     }
 
+    public static String getText(WebElement element, WebDriver driver,String text){
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.textToBePresentInElement(element, text));
+        return element.getText().trim();
+    }
+
     public static String getText(WebElement element, WebDriver driver) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOf(element));
